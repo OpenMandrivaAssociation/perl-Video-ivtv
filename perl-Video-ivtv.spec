@@ -10,7 +10,6 @@ Release:       	%{release}
 License:	GPL or Artistic
 URL:		http://ivtvdriver.org/
 Source0:	http://dl.ivtvdriver.org/supporting-tools/%{module}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl-devel
 
 %description
