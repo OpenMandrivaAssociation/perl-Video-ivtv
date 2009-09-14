@@ -1,5 +1,5 @@
 %define version 0.13
-%define release %mkrel 7
+%define release %mkrel 8
 %define module	Video-ivtv
 
 Name:		perl-%{module}
