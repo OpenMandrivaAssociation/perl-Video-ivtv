@@ -1,16 +1,13 @@
-%define version 0.13
-%define release %mkrel 10
-%define module	Video-ivtv
+%define module Video-ivtv
 
 Name:		perl-%{module}
 Summary:	Perl modules for ivtv support
 Group:		Development/Perl
-Version:	%{version}
-Release:       	%{release}
+Version:	0.13
+Release:	11
 License:	GPL or Artistic
 URL:		http://ivtvdriver.org/
 Source0:	http://dl.ivtvdriver.org/supporting-tools/%{module}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl-devel
 
 %description
@@ -30,14 +27,9 @@ do code cleanups.  ;)
 #make test
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %{makeinstall_std}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc README MANIFEST Changes
 %{perl_vendorlib}/*/Video/ivtv.pm
 %dir %{perl_vendorlib}/*/Video/
