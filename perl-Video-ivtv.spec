@@ -1,13 +1,14 @@
-%define module Video-ivtv
+%define upstream_version 0.13
+%define module	Video-ivtv
 
 Name:		perl-%{module}
 Summary:	Perl modules for ivtv support
 Group:		Development/Perl
-Version:	0.13
-Release:	11
+Version:	%perl_convert_version %{upstream_version}
+Release:    1
 License:	GPL or Artistic
 URL:		http://ivtvdriver.org/
-Source0:	http://dl.ivtvdriver.org/supporting-tools/%{module}-%{version}.tar.bz2
+Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-ivtv-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel
 
 %description
@@ -19,7 +20,7 @@ improving the code rather than hitting my head against the wall trying to
 do code cleanups.  ;)
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -97,4 +98,5 @@ do code cleanups.  ;)
 - initial Mandrake package
 - License
 - Requires
+
 
