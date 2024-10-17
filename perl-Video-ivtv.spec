@@ -7,7 +7,7 @@ Group:		Development/Perl
 Version:	%perl_convert_version %{upstream_version}
 Release:    3
 License:	GPL or Artistic
-URL:		http://ivtvdriver.org/
+URL:		https://ivtvdriver.org/
 Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-ivtv-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel
 
